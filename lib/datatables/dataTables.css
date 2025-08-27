@@ -847,3 +847,82 @@ html.dark .dt-container .dt-paging .dt-paging-button:active {
 *[dir=rtl] div.dt-container div.dt-search input {
   margin: 0 3px 0 0;
 }
+
+/* table formatting 
+
+*/
+
+/* Global */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Logo */
+img[alt="EquiCite"] {
+  margin-bottom: 20px;
+}
+
+/* Table */
+#myTable {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#myTable thead {
+  background: #222;
+  color: #fff;
+}
+#myTable tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+#myTable a {
+  color: #007bff;
+  text-decoration: none;
+}
+#myTable a:hover {
+  text-decoration: underline;
+}
+
+/* Filters */
+#filterBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.filter-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.filter-block label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.filter-block select {
+  width: 100%;
+  min-height: 100px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+/* Reset button */
+#clearFilters {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#clearFilters:hover {
+  background: #0056b3;
+}

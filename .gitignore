@@ -11,10 +11,10 @@
 Icon
 
 # data 
-*.jsonl
-*.csv
-*.parquet
-*.json
+#*.jsonl
+#*.csv
+#*.parquet
+#*.json
 
 
 # Thumbnails
