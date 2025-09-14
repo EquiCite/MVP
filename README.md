@@ -37,3 +37,19 @@ You can run the MVP locally as a static site.
 **With Python**
 ```bash
 python -m http.server 5173
+```
+Visit http://localhost:5173
+
+**With Node**
+```bash
+npx http-server . -p 5173
+```
+Visit http://localhost:5173
+
+**Data Sources**
+- OpenAlex (open bibliographic data).
+- See ABOUT_THE_DATA.md for license, curation details, and caveats.
+
+**Contributing**
+
+We welcome help with code, data quality, UX, and documentation. See CONTRIBUTING.md for setup and guidelines.
