@@ -1,0 +1,4 @@
+/* custom.css */
+h1, h2 { font-weight: 600; }
+.table-striped > tbody > tr:nth-of-type(odd) { background-color: #fdfdfd; }
+.btn-primary { background-color: #2d6a4f; border-color: #2d6a4f; }
