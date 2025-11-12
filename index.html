@@ -112,9 +112,9 @@
               render: (data, type, row) => {
                 if (!data) return '—';
                 const isPdf = /\.pdf(\?|$)/i.test(data);
-                const text  = isPdf ? 'View PDF' : 'Open';
+                const text  = isPdf ? 'View PDF' : 'Link';
                 // show plain text during filtering to keep regex simple
-                if (type === 'filter') return isPdf ? 'View PDF' : 'Open';
+                if (type === 'filter') return isPdf ? 'View PDF' : 'Link';
                 return `<a href="${data}" target="_blank" rel="noopener">${text}</a>`;
               }
             },
