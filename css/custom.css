@@ -2,3 +2,16 @@
 h1, h2 { font-weight: 600; }
 .table-striped > tbody > tr:nth-of-type(odd) { background-color: #fdfdfd; }
 .btn-primary { background-color: #2d6a4f; border-color: #2d6a4f; }
+
+
+.eq-sticky-wrap{
+  position: sticky;
+  top: 12px;              /* how far from top */
+  z-index: 1030;
+  margin: 20px;           /* keeps your spacing */
+}
+
+.eq-sticky-nav{
+  border-radius: 12px;
+  padding: 10px 16px;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EquiCite | HBCU Research Repository</title>
+  <title>The HBCU Research Repository</title>
 
 <!-- Local CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,48 +29,73 @@
     #clearFilters { margin: 8px 0 12px; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; }
     .btn-copy { padding: 2px 8px; }
     table.dataTable td { vertical-align: middle; }
+   
+    .eq-sticky-wrap{
+  position: sticky;
+  top: 12px;
+  z-index: 9999;      /* make sure nothing covers it */
+  margin: 20px;
+}
+
+.eq-sticky-wrap nav{
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+
+/* If custom.css is overriding link colors, force them back */
+.eq-sticky-wrap .nav-link{
+  color: rgba(0,0,0,.75) !important;
+}
+.eq-sticky-wrap .nav-link:hover{
+  color: rgba(0,0,0,.95) !important;
+}
+
   </style>
 </head>
-<body>
-  <!-- Logo -->
-<div style="display: flex; align-items: center; gap: 30px; padding: 15px 40px; background-color: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-radius: 12px;">
+<div class="eq-sticky-wrap">
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-3 fw-bold" href="#">
+        <!-- <img src="img/equicite logo png.png" alt="EquiCite" style="max-height: 52px;"> --> 
+        <span>HBCU Research Repository</span>
+      </a>
 
-  <img src="img/equicite logo png.png" alt="EquiCite" style="max-height: 80px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#eqNav" aria-controls="eqNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <nav style="display: flex; gap: 12px; font-size: 17px;">
-    <a href="https://www.equicite.org/" target="_blank"
-       style="padding: 8px 16px; background-color: #0066cc; color: white; border-radius: 20px; text-decoration: none; transition: 0.3s;">
-       Home
-    </a>
-    <a href="https://www.equicite.org/about-the-data" target="_blank"
-       style="padding: 8px 16px; background-color: #e5f1ff; color: #0066cc; border-radius: 20px; text-decoration: none; transition: 0.3s;">
-       About the Data
-    </a>
-    <a href="https://www.equicite.org/about" target="_blank"
-       style="padding: 8px 16px; background-color: #f3f3f3; color: #333; border-radius: 20px; text-decoration: none; transition: 0.3s;">
-       About Us
-    </a>
-    <a href="https://www.equicite.org/contact-2" target="_blank"
-       style="padding: 8px 16px; background-color: #ffe9ec; color: #cc0033; border-radius: 20px; text-decoration: none; transition: 0.3s;">
-       Contact
-    </a>
+      <div class="collapse navbar-collapse" id="eqNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px;">
+          <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/" target="_blank" rel="noopener">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/about-the-data" target="_blank" rel="noopener">About the Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/about" target="_blank" rel="noopener">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/contact-2" target="_blank" rel="noopener">Contact</a></li>
+        </ul>
+
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-secondary btn-sm" href="https://github.com/EquiCite/MVP" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-primary btn-sm" href="mailto:equicite@gmail.com?subject=EquiCite%20Feedback">Feedback</a>
+        </div>
+      </div>
+    </div>
   </nav>
 </div>
 
-<style>
-  nav a:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-  }
-</style>
 
+<div class="container" style="margin-top: 10px; margin-bottom: 12px;">
+  <div class="p-4 bg-white shadow-sm" style="border-radius: 16px;">
+    <h1 class="mb-1" style="text-align:center; font-size: 2.2rem; font-weight: 800; color: #003366;">
+      The HBCU Research Repository
+    </h1>
+    <p class="mb-0" style="text-align:center; font-size: 1.05rem; color: #555;">
+      Open Access Scholarship from Historically Black Colleges & Universities
+    </p>
+  </div>
+</div>
 
-<h1 style="text-align: center; font-size: 2.4rem; font-weight: 700; color: #003366; margin-bottom: 0.5em;">
-  The HBCU Research Repository
-</h1>
-<h2 style="text-align: center; font-size: 1.5rem; font-weight: 400; color: #444;">
-  Open Access Scholarship from Historically Black Colleges & Universities
-</h2>
+<div class="container">
+  <div class="bg-white shadow-sm p-3 p-lg-4" style="border-radius: 16px;">
+
 
   
 
@@ -96,6 +121,10 @@
     </thead>
     <tbody></tbody>
   </table>
+
+    </div>
+</div>
+
 
   <!-- Scripts: jQuery -> DataTables core -> DataTables Bootstrap skin -> Bootstrap bundle -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -229,8 +258,49 @@
       }
     })();
   </script>
-</body>
-<h5 style="text-align: center;">Founder: Adrianna Seeney | <a href="https://www.linkedin.com/in/aseeney" target="_blank">LinkedIn</a> | <a href="mailto:equicite@gmail.com">Email</a> |
 
-</h5>
+
+<footer class="mt-4">
+  <div class="container">
+    <div class="bg-white shadow-sm p-4" style="border-radius: 16px;">
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="fw-bold">HBCU Research Repository</div>
+          <div class="text-muted small">
+            A searchable repository of HBCU-affiliated scholarship to improve discoverability and citation.
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="fw-bold">Links</div>
+          <div class="d-flex flex-column gap-1 small">
+            <a href="https://www.equicite.org/" target="_blank">Website</a>
+            <a href="https://www.equicite.org/about-the-data" target="_blank">About the Data</a>
+            <a href="https://github.com/EquiCite/MVP" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="fw-bold">Founder</div>
+          <div class="d-flex flex-column gap-1 small">
+            <span class="text-muted">Adrianna Seeney</span>
+            <a href="https://www.linkedin.com/in/aseeney" target="_blank">LinkedIn</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-3" />
+      <div class="text-muted small">
+        © <span id="year"></span> HBCU Research Repository. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
