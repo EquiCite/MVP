@@ -29,6 +29,9 @@ Planned next:
 - Author disambiguation
 - Bulk export
 
+## Data Model
+[Alt text](https://github.com/EquiCite/MVP/blob/main/img/openalex-schema-1024x967.png)
+
 ---
 
 ## Quick Start (Local Use)
