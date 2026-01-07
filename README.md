@@ -30,7 +30,7 @@ Planned next:
 - Bulk export
 
 ## Data Model
-[Alt text](https://github.com/EquiCite/MVP/blob/main/img/openalex-schema-1024x967.png)
+![OpenAlex Schema](https://github.com/EquiCite/MVP/raw/main/img/openalex-schema-1024x967.png)
 
 ---
 
