@@ -3,7 +3,7 @@
 Open access discovery tools that surface HBCU-affiliated scholarship and improve research visibility.
 
 **Status:** MVP (actively evolving)  
-**Demo:** [Visit the live demo](https://<your-demo-url>)  
+**Demo:** [Visit the live demo](https://equicite.netlify.app)  
 **Docs:** See [CONTRIBUTING.md](CONTRIBUTING.md) if you’d like to get involved.
 
 ---
@@ -28,6 +28,9 @@ Planned next:
 - Relevance tuning
 - Author disambiguation
 - Bulk export
+
+## Data Model
+![OpenAlex Schema](https://github.com/EquiCite/MVP/raw/main/img/openalex-schema-1024x967.png)
 
 ---
 
