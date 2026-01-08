@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About the Data | HBCU Research Repository</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <style>
+    body { padding: 20px; }
+    .eq-sticky-wrap{
+      position: sticky;
+      top: 12px;
+      z-index: 9999;
+      margin: 20px;
+    }
+    .eq-sticky-wrap nav{
+      border-radius: 12px;
+      padding: 10px 16px;
+    }
+    .eq-sticky-wrap .nav-link{
+      color: rgba(0,0,0,.75) !important;
+    }
+    .eq-sticky-wrap .nav-link:hover{
+      color: rgba(0,0,0,.95) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky nav -->
+  <div class="eq-sticky-wrap">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">
+          HBCU Research Repository
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#eqNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="eqNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Repository</a></li>
+            <li class="nav-item"><a class="nav-link active fw-semibold" href="about-the-data.html">About the Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="https://github.com/EquiCite/MVP" target="_blank">GitHub</a></li> -->
+          </ul>
+
+          <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Feedback
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Header -->
+  <div class="container mb-3">
+    <div class="p-4 bg-white shadow-sm" style="border-radius:16px;">
+      <h1 style="font-weight:800; color:#003366;">About the Data</h1>
+      <p class="text-muted mb-0">
+        Transparency around data sources, scope, and limitations.
+      </p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="bg-white shadow-sm p-4" style="border-radius:16px;">
+
+      <h2>What this repository contains</h2>
+      <p>
+        The HBCU Research Repository is a curated, searchable collection of
+        scholarly works affiliated with Historically Black Colleges and Universities (HBCUs).
+        The goal is to improve discoverability, citation, and visibility of HBCU-affiliated scholarship.
+      </p>
+
+      <p>
+        The repository currently includes academic works such as:
+      </p>
+      <ul>
+        <li>Journal articles</li>
+        <li>Conference papers</li>
+        <li>Working papers and reports (where available)</li>
+        <li>Open access links to full-text PDFs when provided by the source</li>
+      </ul>
+
+      <hr class="my-4"/>
+
+      <h2>Data sources</h2>
+      <p>
+        The data is aggregated from publicly available scholarly metadata sources,
+        including open research indexes and open access discovery services.
+        These sources collect metadata from publishers, repositories, and institutional systems.
+      </p>
+
+      <p>
+        HBCU affiliation is determined based on institutional metadata provided by these sources.
+        This may include author affiliations, institutional identifiers, or repository associations.
+      </p>
+
+      <hr class="my-4"/>
+
+      <h2>What “HBCU-affiliated” means</h2>
+      <p>
+        A work is considered HBCU-affiliated if at least one author is associated with an HBCU
+        according to the available metadata at the time of ingestion.
+      </p>
+
+      <p>
+        Because institutional metadata is not always complete or consistently reported,
+        some HBCU-affiliated works may be missing, misclassified, or attributed to broader institutions.
+        Improving this accuracy is an ongoing focus of the project.
+      </p>
+
+      <hr class="my-4"/>
+
+      <h2>Data limitations</h2>
+      <p>
+        This repository is an evolving dataset and should not be treated as a complete or authoritative record.
+        Known limitations include:
+      </p>
+
+      <ul>
+        <li>Incomplete or inconsistent institutional affiliations</li>
+        <li>Missing abstracts, keywords, or subject classifications</li>
+        <li>Gaps in open access coverage, even when a work exists publicly</li>
+        <li>Delayed updates as new works are published or indexed</li>
+      </ul>
+
+      <p>
+        These gaps reflect broader structural issues in academic metadata and discovery systems,
+        not the absence of scholarship.
+      </p>
+
+      <hr class="my-4"/>
+
+      <h2>How the data is updated</h2>
+      <p>
+        The dataset is periodically refreshed and refined as new metadata becomes available
+        and as issues are identified through user feedback.
+        Priority is given to improving:
+      </p>
+
+      <ul>
+        <li>Institutional accuracy</li>
+        <li>Topic and subject consistency</li>
+        <li>Open access links</li>
+        <li>Citation quality</li>
+      </ul>
+
+      <hr class="my-4"/>
+
+      <h2>How you can help</h2>
+      <p>
+        If you notice missing works, incorrect affiliations, broken links, or metadata issues,
+        please use the <strong>Feedback</strong> button on the site.
+      </p>
+
+      <p>
+        Contributions from researchers, librarians, and institutional partners are especially valuable
+        in improving coverage and accuracy.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-4">
+    <div class="container">
+      <div class="bg-white shadow-sm p-4" style="border-radius:16px;">
+        <div class="text-muted small">
+          © <span id="year"></span> HBCU Research Repository
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal (reuse same modal + feedback.js) -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/feedback.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
