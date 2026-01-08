@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roadmap | HBCU Research Repository</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <style>
+    body { padding: 20px; }
+    .eq-sticky-wrap{
+      position: sticky;
+      top: 12px;
+      z-index: 9999;
+      margin: 20px;
+    }
+    .eq-sticky-wrap nav{
+      border-radius: 12px;
+      padding: 10px 16px;
+    }
+    .eq-sticky-wrap .nav-link{
+      color: rgba(0,0,0,.75) !important;
+    }
+    .eq-sticky-wrap .nav-link:hover{
+      color: rgba(0,0,0,.95) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sticky nav -->
+  <div class="eq-sticky-wrap">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-3 fw-bold" href="index.html">
+          <span>HBCU Research Repository</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#eqNav"
+          aria-controls="eqNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="eqNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 16px;">
+            <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/" target="_blank" rel="noopener">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/about-the-data" target="_blank" rel="noopener">About the Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/about" target="_blank" rel="noopener">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.equicite.org/contact-2" target="_blank" rel="noopener">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active fw-semibold" href="roadmap.html">Roadmap</a></li>
+          </ul>
+
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline-secondary btn-sm" href="https://github.com/EquiCite/MVP" target="_blank" rel="noopener">GitHub</a>
+            <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+              Feedback
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Page header -->
+  <div class="container" style="margin-top: 10px; margin-bottom: 12px;">
+    <div class="p-4 bg-white shadow-sm" style="border-radius: 16px;">
+      <h1 class="mb-1" style="text-align:center; font-size: 2.2rem; font-weight: 800; color: #003366;">
+        Public Roadmap
+      </h1>
+      <p class="mb-0" style="text-align:center; font-size: 1.05rem; color: #555;">
+        What I’m building next for the HBCU Research Repository — shaped by real user feedback.
+      </p>
+      <div class="text-center mt-2">
+        <span class="badge text-bg-light border">Last updated: <span id="roadmapUpdated"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Roadmap content -->
+  <div class="container">
+    <div class="bg-white shadow-sm p-3 p-lg-4" style="border-radius: 16px;">
+
+      <div class="row g-3">
+        <!-- NOW -->
+        <div class="col-lg-4">
+          <div class="p-3 h-100 border rounded-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h2 class="h5 mb-0">Now</h2>
+              <span class="badge text-bg-primary">Active</span>
+            </div>
+            <p class="text-muted small mb-2">Shipping + validating with users.</p>
+            <ul class="mb-0">
+              <li>Collecting feedback from researchers, students, faculty, and librarians</li>
+              <li>Improving search + filters based on real usage</li>
+              <li>Fixing metadata issues that hurt discoverability</li>
+              <li>Making citations easier to copy and reuse</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- NEXT -->
+        <div class="col-lg-4">
+          <div class="p-3 h-100 border rounded-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h2 class="h5 mb-0">Next</h2>
+              <span class="badge text-bg-secondary">Planned</span>
+            </div>
+            <p class="text-muted small mb-2">High-confidence improvements (no dates).</p>
+            <ul class="mb-0">
+                <li>Adding datasets, books, and other academic content</li>
+              <li>Saved searches / bookmarks</li>
+              <li>Cleaner topic organization + normalization</li>
+              <li>Citation export formats (BibTeX / RIS)</li>
+              <li>Better browsing by institution</li>
+              <li>Personalized reccomendations to email</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- LATER -->
+        <div class="col-lg-4">
+          <div class="p-3 h-100 border rounded-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h2 class="h5 mb-0">Later</h2>
+              <span class="badge text-bg-light border">Direction</span>
+            </div>
+            <p class="text-muted small mb-2">Longer-term direction as the dataset grows.</p>
+            <ul class="mb-0">
+              <li>Personalized discovery + alerts</li>
+              <li>Author and institution profiles</li>
+              <li>Deeper citation / impact insights</li>
+              <li>Bulk access or API options for researchers & libraries</li>
+              <li>Include more data sources such as arxiv, PubMed, and Google Scholar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4"/>
+
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-2">
+        <div>
+          <div class="fw-semibold">Want to influence the roadmap?</div>
+          <div class="text-muted small">
+            Click <strong>Feedback</strong> and tell me what you were trying to do — I read every submission.
+          </div>
+        </div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+          Leave feedback
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-4">
+    <div class="container">
+      <div class="bg-white shadow-sm p-4" style="border-radius: 16px;">
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <div class="fw-bold">HBCU Research Repository</div>
+            <div class="text-muted small">
+              A searchable repository of HBCU-affiliated scholarship to improve discoverability and citation.
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="fw-bold">Links</div>
+            <div class="d-flex flex-column gap-1 small">
+              <a href="index.html">Repository</a>
+              <a href="roadmap.html">Roadmap</a>
+              <a href="https://github.com/EquiCite/MVP" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="fw-bold">Founder</div>
+            <div class="d-flex flex-column gap-1 small">
+              <span class="text-muted">Adrianna Seeney</span>
+              <a href="https://www.linkedin.com/in/aseeney" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-3" />
+        <div class="text-muted small">
+          © <span id="year"></span> HBCU Research Repository. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal (reuse the SAME modal you already have) -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 16px;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="feedbackModalLabel">Help build EquiCite</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p class="text-muted mb-3">
+            Drop your info + 1–2 thoughts. I’ll follow up for a quick user chat.
+          </p>
+
+          <form id="feedbackForm" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input name="name" class="form-control" placeholder="Your name" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Email (best)</label>
+              <input name="email" type="email" class="form-control" placeholder="you@email.com" required />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Role / affiliation</label>
+              <input name="role" class="form-control" placeholder="Student, faculty, librarian, researcher…" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">HBCU (if applicable)</label>
+              <input name="hbcu" class="form-control" placeholder="e.g., Howard University" />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">What were you trying to do today?</label>
+              <input name="goal" class="form-control" placeholder="Find papers on…, export citations, browse by HBCU…" />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Feedback / ideas (optional)</label>
+              <textarea name="feedback" class="form-control" rows="4" placeholder="What’s confusing? What’s missing? What would make this 10x better?"></textarea>
+            </div>
+
+            <div class="col-12 d-flex align-items-center justify-content-between">
+              <div class="text-muted small" id="feedbackStatus"></div>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+
+          <hr class="my-3" />
+
+          <div class="small text-muted">
+            By submitting, you’re okay with being contacted for product feedback. No spam.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local JS -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your existing feedback handler (Google Form submit) -->
+  <script src="js/feedback.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Update date: set once manually for honesty
+    // Change this string whenever you update roadmap items:
+    document.getElementById("roadmapUpdated").textContent = "January 7, 2026";
+  </script>
+</body>
+</html>
