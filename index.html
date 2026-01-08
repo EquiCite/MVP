@@ -74,7 +74,10 @@
 
         <div class="d-flex gap-2">
           <a class="btn btn-outline-secondary btn-sm" href="https://github.com/EquiCite/MVP" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-primary btn-sm" href="mailto:equicite@gmail.com?subject=EquiCite%20Feedback">Feedback</a>
+          <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Feedback
+          </button>
+          
         </div>
       </div>
     </div>
@@ -126,13 +129,13 @@
 </div>
 
 
-  <!-- Scripts: jQuery -> DataTables core -> DataTables Bootstrap skin -> Bootstrap bundle -->
+  <!-- Scripts: jQuery -> DataTables core -> DataTables Bootstrap skin -> Bootstrap bundle 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>-->
 
-  <!-- App script -->
+  <!-- App script 
   <script>
     const DATA_URL = "data/equicite_mvp_dataset.json"; // <-- make sure this path is correct
 
@@ -257,7 +260,7 @@
         alert("Could not load the dataset. Open the browser console for details.");
       }
     })();
-  </script>
+  </script>-->
 
 
 <footer class="mt-4">
@@ -301,6 +304,72 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<!-- Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 16px;">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="feedbackModalLabel">Help advance access to HBCU Research </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p class="text-muted mb-3">
+          Drop your info + 1–2 thoughts. I’ll follow up for a quick user chat.
+        </p>
+
+        <form id="feedbackForm" class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input name="name" class="form-control" placeholder="Your name" />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Email (best)</label>
+            <input name="email" type="email" class="form-control" placeholder="you@email.com" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Role / affiliation</label>
+            <input name="role" class="form-control" placeholder="Student, faculty, librarian, researcher…" />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">HBCU / University / Institution (if applicable)</label>
+            <input name="hbcu" class="form-control" placeholder="e.g., Clark Atlanta University" />
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">What were you trying to do today?</label>
+            <input name="goal" class="form-control" placeholder="Find papers on…, export citations, browse by HBCU…" />
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Feedback / ideas (optional)</label>
+            <textarea name="feedback" class="form-control" rows="4" placeholder="What’s confusing? What’s missing? What would make this 10x better?"></textarea>
+          </div>
+
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <div class="text-muted small" id="feedbackStatus"></div>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <hr class="my-3" />
+
+        <div class="small text-muted">
+          By submitting, you’re okay with being contacted for product feedback. No spam.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/analytics.js"></script>
+<script src="js/app.js"></script>
+<script src="js/feedback.js"></script>
 
 </body>
 </html>
